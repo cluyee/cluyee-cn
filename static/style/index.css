@@ -4,107 +4,164 @@
 */
 
 .wrapper{
-    overflow: hidden;
     background: #fff;
+    border-top: solid 6px #333;
 }
-.outer{
-    height: 500px;
-    background: #303641;
-}
-.main{
+.header{
     position: relative;
-    width: 800px;
-    margin: 30px auto 0;
-}
-.main .ic-line{
-    width: 60px;
-    height: 5px;
+    width: 1200px;
     margin: 0 auto;
-    background: #303641;
+    padding-bottom: 35px;
 }
-.main ul{
-    margin-top: 50px;
-}
-.main li{
-    float: left;
-    *display: inline;
-    width: 25%;
-    text-align: center;
-}
-.main a{
+.header .logo{
     position: relative;
-    display: inline-block;
-    width: 100%;
-    height: 40px;
+    top: 15px;
 }
-.main a:before,
-.main a:after{
-    content: "";
+.header .logo a{
     display: inline-block;
+}
+.header .mylink{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    transition: all .4s ease;
-    -webkit-transition: all .4s ease;
-    backface-visibility:hidden;
-    -webkit-backface-visibility:hidden;
-    -moz-backface-visibility:hidden; 
-    -ms-backface-visibility:hidden;
+    top: 10px;
+    right: 0;
+    zoom: 1;
+    font-size: 0;
 }
-.main a:before{
-    background: url("../../static/images/font.png") no-repeat;
+.header .ilink{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+    margin-left: 5px;
+    line-height: 36px;
+    text-align: center;
+    color: #333;
 }
-.main a:after{
-    transform: rotateY(-180deg); 
-    -webkit-transform: rotateY(-180deg);
-    border-radius: 30px 5px 30px 5px/28px 5px 28px 5px;
-    background: #303641 url("../../static/images/font.png") no-repeat;
+.header .i1{
+    background: #f0b1b9;
 }
-.main a.ft-artical{
-    width: 134px;
+.header .i2{
+    background: #bbb6d6;
 }
-.main a.ft-travel{
-    width: 155px;
+.header .i3{
+    background: #daecb0;
 }
-.main a.ft-myworks{
-    width: 125px;
+.header .i4{
+    background: #e87982;
 }
-.main a.ft-food{
-    width: 100px;
+.header .animate-bird{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1000px;
+    border-bottom: solid 2px #000;
 }
-.main a.ft-artical:before{
-    background-position: 5px 0;
+.header .animate-bird:before{
+    position: absolute;
+    top: -70px;
+    left: 400px;
+    content: "";
+    width: 70px;
+    height: 36px;
+    border: solid 1px #000;
+    border-left: none;
+    border-right: none;
+    transform: skewX(60deg);
 }
-.main a.ft-travel:before{
-    background-position: 5px -40px;
+.header .animate-bird:after{
+    position: absolute;
+    top: -47px;
+    right: 300px;
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: url("../images/person.png") no-repeat;
 }
-.main a.ft-myworks:before{
-    background-position: 5px -80px;
-}
-.main a.ft-food:before{
-    background-position: 5px -120px;
-}
-.main a.ft-artical:after{
-    background-position: -151px 0;   
-}
-.main a.ft-travel:after{
-    background-position: -151px -40px;
-}
-.main a.ft-myworks:after{
-    background-position: -151px -80px;
-}
-.main a.ft-food:after{
-    background-position: -151px -120px;
-}
-.main a:hover:before{
-    transform: rotateY(180deg); 
-    -webkit-transform: rotateY(180deg);
-}
-.main a:hover:after{
-    transform: rotateY(0deg); 
-    -webkit-transform: rotateY(0deg);  
+.footer{
+    margin-top: 10px;
+    padding: 10px 0;
+    text-align: center;
+    color: #333;
 }
 
+.container{
+    margin-top: 60px;
+}
+.container .main{
+    text-align: center;
+}
+.container .banner{
+    display: inline-block;
+    width: 110px;
+    height: 40px;
+    margin: 0 12px;
+    color: #333;
+    font-size: 16px;
+    line-height: 40px;
+}
+.container .banner .text{
+    display: block;
+    border: solid 1px #333;
+}
+.container .banner:hover .text{
+    background: #333;
+    color: #fff;
+}
+.container .area{
+    overflow: hidden;
+    margin-top: 50px;
+}
+.container .svg1{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* ====== svg ===== */
+.route-svg{
+    overflow: hidden;
+    width: 100%;
+    height: 600px;
+}
+.route-svg .path1{
+    stroke: #000;
+    stroke-width: 1;
+    fill: none;
+}
+.route-svg .path2{
+    stroke: #999;
+    stroke-width: 3;
+    fill: none;
+}
+.route-svg .line1{
+    stroke: #000;
+    stroke-width: 1;
+}
+.route-svg .line2{
+    stroke: #999;
+    stroke-width: 3;
+}
+.route-svg .line3{
+    stroke: #000;
+    stroke-width: 6;
+}
+.route-svg .g1{
+    stroke: #000;
+    stroke-width: 8;
+    fill: none;
+}
+.route-svg .g2{
+    stroke: #000;
+    stroke-width: 12;
+    fill: none;
+}
+.route-svg .g3{
+    stroke: #000;
+    stroke-width: 18;
+    fill: none;
+}
+.route-svg .g4{
+    stroke: #000;
+    stroke-width: 20;
+    fill: none;
+}
 
