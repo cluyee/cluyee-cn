@@ -2,10 +2,15 @@
 * author: c.luyee
 * date: 2016/06/01
 */
-
+body{
+    background: #0d0d0d;
+}
 .wrapper{
-    background: #fff;
     border-top: solid 6px #333;
+}
+.inner{
+    overflow: hidden;
+    background: #fff;
 }
 .header{
     position: relative;
@@ -77,17 +82,13 @@
     height: 50px;
     background: url("../images/person.png") no-repeat;
 }
-.footer{
-    margin-top: 10px;
-    padding: 10px 0;
-    text-align: center;
-    color: #333;
-}
 
 .container{
-    margin-top: 60px;
+    overflow: hidden;
 }
 .container .main{
+    padding-bottom: 250px;
+    margin-top: 60px;
     text-align: center;
 }
 .container .banner{
@@ -101,67 +102,39 @@
 }
 .container .banner .text{
     display: block;
-    border: solid 1px #333;
+    border: solid 1px #1d1d1d;
 }
 .container .banner:hover .text{
-    background: #333;
+    background: #1d1d1d;
     color: #fff;
 }
-.container .area{
-    overflow: hidden;
-    margin-top: 50px;
+
+.footer{
+    position: relative;
+    text-align: center;
+    color: #fff;
 }
-.container .svg1{
-    width: 1000px;
-    margin: 0 auto;
+.footer .area{
+    overflow: hidden;
+}
+.footer .copyright{
+    position: absolute;
+    right: 400px;
+    bottom: 10px;
 }
 
 /* ====== svg ===== */
 .route-svg{
     overflow: hidden;
     width: 100%;
-    height: 600px;
-}
-.route-svg .path1{
-    stroke: #000;
-    stroke-width: 1;
-    fill: none;
-}
-.route-svg .path2{
-    stroke: #999;
-    stroke-width: 3;
-    fill: none;
+    height: 452px;
 }
 .route-svg .line1{
-    stroke: #000;
+    stroke: #fff;
     stroke-width: 1;
+    fill: none;
 }
 .route-svg .line2{
-    stroke: #999;
+    stroke: #fff;
     stroke-width: 3;
 }
-.route-svg .line3{
-    stroke: #000;
-    stroke-width: 6;
-}
-.route-svg .g1{
-    stroke: #000;
-    stroke-width: 8;
-    fill: none;
-}
-.route-svg .g2{
-    stroke: #000;
-    stroke-width: 12;
-    fill: none;
-}
-.route-svg .g3{
-    stroke: #000;
-    stroke-width: 18;
-    fill: none;
-}
-.route-svg .g4{
-    stroke: #000;
-    stroke-width: 20;
-    fill: none;
-}
-
