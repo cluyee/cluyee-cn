@@ -3,15 +3,18 @@
 * date: 2016/12/30
 */
 body{
-	background: #fff;
+	background: #eee;
 }
 .container{
 	position: relative;
+	padding-left: 400px;
 }
 .side{
-	position: relative;
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 350px;
-	height: 950px;
+	min-height: 950px;
 	border-left: 5px solid #3a4362;
 	background: #94b6c2 url('../images/logoText.png') no-repeat 30px 50px;
 }
@@ -50,7 +53,7 @@ body{
 	border-right: none;
 	text-align: center;
 	color: #fff;
-	transition: all 0.6s ease;
+	transition: all .6s ease;
 }
 .side .link:hover{
 	padding: 0 30px;
@@ -66,5 +69,65 @@ body{
 	color: #222;
 }
 .main{
-	float: right;
+	padding: 230px 0 0 200px;
+	background: url('../images/blog.png') no-repeat 90px 85px;
+}
+.main .item{
+	overflow: hidden;
+	margin-bottom: 60px;
+}
+.main .square{
+	display: inline-block;
+	position: relative;
+	width: 110px;
+	height: 110px;
+	background: #fff;
+	color: #000;
+	text-align: center;
+	line-height: 60px;
+	font-size: 18px;
+}
+.main .sq-golden:after,
+.main .sq-gray:after,
+.main .sq-black:after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+}
+.main .sq-golden:after{
+	background: #201e2d;
+}
+.main .sq-gray:after{
+	background: #a9947e;
+}
+.main .sq-black:after{
+	background: #878683;
+}
+.main .txt{
+	display: inline-block;
+	position: relative;
+	top: 15px;
+	width: 250px;
+	margin-left: 30px;
+	border-bottom: 2px solid #333;
+	font-size: 20px;
+	line-height: 60px;
+	color: #333;
+	text-indent: 10px;
+}
+.main .txt:after{
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: #fff;
+	transition: all .4s ease;
+}
+.main .txt:hover:after{
+	width: 100%;
 }
