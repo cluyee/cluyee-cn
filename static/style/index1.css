@@ -1,0 +1,140 @@
+/* 
+* author: c.luyee
+* date: 2016/06/01
+*/
+body{
+    background: #0d0d0d;
+}
+.wrapper{
+    border-top: solid 6px #0d0d0d;
+}
+.inner{
+    overflow: hidden;
+    background: #fff;
+}
+.header{
+    position: relative;
+    width: 1100px;
+    margin: 10px auto 0;
+    padding-bottom: 35px;
+}
+.header .logo{
+    position: relative;
+    top: 10px;
+}
+.header .logo a{
+    display: inline-block;
+}
+.header .mylink{
+    position: absolute;
+    top: 0;
+    right: 0;
+    zoom: 1;
+    font-size: 0;
+}
+.header .ilink{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+    margin-left: 5px;
+    line-height: 36px;
+    text-align: center;
+    color: #333;
+}
+.header .i1{
+    background: #f0b1b9;
+}
+.header .i2{
+    background: #bbb6d6;
+}
+.header .i3{
+    background: #daecb0;
+}
+.header .i4{
+    background: #e87982;
+}
+.header .animate-bird{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 950px;
+    border-bottom: solid 2px #000;
+}
+.header .animate-bird:before{
+    position: absolute;
+    top: -70px;
+    left: 450px;
+    content: "";
+    width: 70px;
+    height: 36px;
+    border: solid 1px #000;
+    border-left: none;
+    border-right: none;
+    transform: skewX(60deg);
+}
+.header .animate-bird:after{
+    position: absolute;
+    top: -47px;
+    right: 250px;
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: url("../images/person.png") no-repeat;
+}
+
+.container{
+    overflow: hidden;
+}
+.container .main{
+    padding-bottom: 335px;
+    margin-top: 50px;
+    text-align: center;
+}
+.container .banner{
+    display: inline-block;
+    width: 110px;
+    height: 40px;
+    margin: 0 12px;
+    color: #333;
+    font-size: 16px;
+    line-height: 40px;
+}
+.container .banner .text{
+    display: block;
+    border: solid 1px #1d1d1d;
+}
+.container .banner:hover .text{
+    background: #1d1d1d;
+    color: #fff;
+}
+
+.footer{
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+.footer .area{
+    overflow: hidden;
+}
+.footer .copyright{
+    position: absolute;
+    right: 500px;
+    bottom: 10px;
+}
+
+/* ====== svg ===== */
+.route-svg{
+    overflow: hidden;
+    width: 100%;
+    height: 402px;
+}
+.route-svg .line1{
+    stroke: #fff;
+    stroke-width: 1;
+    fill: none;
+}
+.route-svg .line2{
+    stroke: #fff;
+    stroke-width: 3;
+}
