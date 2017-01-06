@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <title>C.luyee</title>
+    <title>luyee的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="static/style/common/reset.css" />
     <link rel="stylesheet" href="static/style/common/common.css" />
     <link rel="stylesheet" href="static/style/index.css" />
 </head>
+
 <body>
     <div class="container">
-    	<div class="main">
+        <div class="main">
             <p class="notice">【公告】 个人博客开发中 . . .</p>
-            <div class="item"><span class="square sq-golden">Front-End</span><a class="txt">前端</a></div>
-            <div class="item"><span class="square sq-gray">Example</span><a class="txt">栗子</a></div>
-            <div class="item"><span class="square sq-black">Essay</span><a class="txt">随笔</a></div>
+            <div class="item-wrap">
+                <div class="item"><span class="square sq-golden">Front-End</span><a class="txt">前端</a></div>
+                <div class="item"><span class="square sq-gray">Example</span><a class="txt">栗子</a></div>
+                <div class="item"><span class="square sq-black">Essay</span><a class="txt">随笔</a></div>
+            </div>
+            <div class="item-wrap">
+                <div class="item"><span class="square sq-green">Travel</span><a class="txt">旅徒</a></div>
+            </div>
         </div>
-    	<div class="side">
-    		<p class="text">前端路漫漫 . . .</p>
-    		<div class="avatar"><img src="static/images/avatar.jpg" alt=""/></div>
-    		<div class="menu">
-    			<a class="link" href="#">首页</a>
-    			<a class="link" href="#">插件</a>
-                <a class="link" href="#">留言</a>
-    			<a class="link" href="#">关于</a>
-    		</div>
-    		<p class="copyright">Copyright© cluyee.github.io</p>
-    	</div>
+        <div class="side">
+            <p class="text">前端路漫漫 . . .</p>
+            <div class="avatar"><img src="static/images/avatar.jpg" alt="" /></div>
+            <div class="menu">
+                <a class="link active" href="javascript:;">博客主页</a>
+                <a class="link" href="./modules/plugins/index.html">插件库</a>
+                <a class="link" href="./modules/comment/index.html">留言板</a>
+                <a class="link" href="./modules/about/index.html">关于</a>
+            </div>
+            <p class="copyright">Copyright© cluyee.github.io</p>
+        </div>
     </div>
 </body>
+
 </html>

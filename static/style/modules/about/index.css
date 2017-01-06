@@ -1,0 +1,64 @@
+/* 
+* author: c.luyee
+* date: 2017/01/05
+*/
+
+.container {
+    position: relative;
+    padding-left: 400px;
+}
+
+.main {
+    overflow: hidden;
+    padding: 60px 0 0 80px;
+}
+
+.main h2 {
+    width: 700px;
+    margin-bottom: 20px;
+    border-bottom: 1px dotted #666;
+    font-size: 16px;
+    line-height: 40px;
+    color: #333;
+}
+
+.main p {
+    line-height: 32px;
+}
+
+.main .tips {
+    width: 660px;
+    padding: 15px 20px;
+    margin: 25px 0;
+    background: #dfdfdf;
+    font-style: italic;
+    color: #666;
+    line-height: 26px;
+}
+
+.main .other-link {
+    margin: 20px 0;
+}
+
+.main .other {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+    font-style: italic;
+    font-size: 16px;
+    color: #666;
+}
+
+.main .other:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-bottom: 1px dotted #666;
+}
+
+.main .other:hover:after {
+    width: 0;
+}
