@@ -83,7 +83,6 @@ body {
 }
 
 .default{
-    width: 1200px;
     padding-top: 190px;
     margin-top: 200px;
     background: url('../../images/default.png') no-repeat center top;
