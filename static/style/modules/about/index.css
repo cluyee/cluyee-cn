@@ -1,46 +1,33 @@
 /* 
 * author: c.luyee
-* date: 2017/01/05
+* date: 2017/01/25
 */
 
-.container {
-    position: relative;
-    padding-left: 400px;
+.mod-about {
+	overflow: hidden;
+	padding: 20px 40px;
 }
-
-.main {
-    overflow: hidden;
-    padding: 60px 0 0 80px;
-}
-
-.main h2 {
-    width: 700px;
-    margin-bottom: 20px;
-    border-bottom: 1px dotted #666;
+.mod-about h2 {
+	margin-bottom: 10px;
+	border-bottom: 1px dotted #666;
     font-size: 16px;
-    line-height: 40px;
-    color: #333;
+    line-height: 50px;
 }
-
-.main p {
-    line-height: 32px;
+.mod-about p {
+	line-height: 32px;
 }
-
-.main .tips {
-    width: 660px;
-    padding: 15px 20px;
-    margin: 25px 0;
-    background: #dfdfdf;
+.mod-about .tips {
+	padding: 15px 20px;
+    margin: 15px 0;
     font-style: italic;
     color: #666;
     line-height: 26px;
 }
-
-.main .other-link {
+.mod-about .other-link {
     margin: 20px 0;
 }
 
-.main .other {
+.mod-about .other {
     position: relative;
     display: inline-block;
     margin: 0 10px;
@@ -49,7 +36,7 @@
     color: #666;
 }
 
-.main .other:after {
+.mod-about .other:after {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -57,8 +44,4 @@
     width: 100%;
     height: 4px;
     border-bottom: 1px dotted #666;
-}
-
-.main .other:hover:after {
-    width: 0;
 }
