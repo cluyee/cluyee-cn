@@ -18,16 +18,33 @@
                     <a class="nav-item" href="./modules/example/index.html">栗子</a>
                     <a class="nav-item" href="./modules/plugins/index.html">插件库</a>
                     <a class="nav-item" href="./modules/essay/index.html">随笔</a>
+                    <a class="nav-item" href="./modules/travel/index.html">旅行</a>
                     <a class="nav-item" href="./modules/about/index.html">关于</a>
                 </div>
             </div>
-            <div class="container">
-                <div class="default">由于博主太懒，暂未开发</div>
+            <div id="list" class="container">
+                <template v-if="nodata">
+                    <div class="default">由于博主太懒，暂未开发</div>
+                </template>
+                <template v-else>
+                    <div class="mod-index">
+                    </div>
+                </template>
             </div>
         </div>
         <div class="footer">
             <p class="copyright">Copyright© cluyee.github.io</p>
         </div>
-    </div>   
+    </div>
+
+    <script src="static/script/lib/vue.js"></script>
+    <script>
+        var index = new Vue({
+            el:'#list',
+            data:{
+                nodata:true
+            }
+        });
+    </script>
 </body>
 </html>

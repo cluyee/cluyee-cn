@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>旅行 - luyee的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../static/style/common/common.css" />
+    <link rel="stylesheet" href="../../static/style/modules/travel/picture.css" />
+</head>
+<body>
+    <div class="wrap">
+    	<div  class="header">
+            <a class="logo" href="/"><img src="../../static/images/logo.png" alt="logo" /></a>
+            <div class="nav">
+                <a class="nav-item" href="../../index.html">主页</a>
+                <a class="nav-item" href="../frontend/index.html">前端</a>
+                <a class="nav-item" href="../example/index.html">栗子</a>
+                <a class="nav-item" href="../plugins/index.html">插件库</a>
+                <a class="nav-item" href="../essay/index.html">随笔</a>
+                <a class="nav-item active" href="javascript:;">旅行</a>
+                <a class="nav-item" href="../about/index.html">关于</a>
+            </div>
+        </div>
+        <div id="password" class="container">
+        	<template v-if="lock">
+	        	<div class="mod-password">
+	        		<span class="input-box" :class="[onfocus? 'cls-focus':'']">
+	        			<input id="input" class="input-pw" type="text" name="password" @focus="pwOnFocus" @blur="pwOnBlur" @input="pwOnChange" @keyup.enter="pwOnSubmit" placeholder="我的全名是...">
+	        			<span v-show="showClear" @click="clear" class="clear"></span>
+	        		</span>
+	        		<input class="submit" type="button" @click="pwOnSubmit" name="submit" value="确认">
+	        	</div>
+        	</template>
+        	<template v-else>
+	        	<div class="mod-picture">
+	        		<ul class="picture-list">
+	        			<li v-for="item in piclist" class="picture"><img :src="item" height="400" alt=""></li>
+	        		</ul>
+	        	</div>
+        	</template>
+        </div>
+    	<div class="footer">
+            <p class="copyright">Copyright© cluyee.github.io</p>
+        </div>
+    </div>
+	
+	<script src="../../static/script/lib/vue.js"></script>
+    <script>
+    	var pw = new Vue({
+    		el:'#password',
+    		data:{
+    			lock:true,
+    			onfocus:false,
+    			pwVal:'',
+    			showClear: false,
+    			piclist:[
+    				'../../static/images/pic/yunnan.jpg',
+    				'../../static/images/pic/xianggang.jpg',
+    				'../../static/images/pic/shanghai.jpg',
+    				'../../static/images/pic/yunnan.jpg',
+    				'../../static/images/pic/suzhou.jpg',
+    				'../../static/images/pic/xianggang.jpg',
+    				'../../static/images/pic/shanghai.jpg'
+    			]
+    		},
+    		methods:{
+    			pwOnFocus:function(e){
+    				this.onfocus = true;
+    				var value = e.target.value;
+    				value = value.replace(/(^\s+)|(\s+$)/g,"");
+    				if(value){
+    					this.showClear = true;
+    				}else{
+    					this.showClear = false;
+    				}
+    			},
+    			pwOnBlur:function(e){
+    				this.onfocus = false;
+    				var value = e.target.value;
+    				value = value.replace(/(^\s+)|(\s+$)/g,"");
+    				if(value){
+    					this.showClear = true;
+    				}else{
+    					this.showClear = false;
+    				}
+    			},
+    			pwOnChange:function(e){
+    				var value = e.target.value;
+    				value = value.replace(/(^\s+)|(\s+$)/g,"");
+    				this.pwVal = value;
+    				if(value){
+    					this.showClear = true;
+    				}else{
+    					this.showClear = false;
+    				}
+    			},
+  				pwOnSubmit:function(e){
+  					if(this.pwVal==unescape('%u9648%u67F3%u8863')){
+  						this.lock = false;
+  					}
+  				},
+  				clear:function(e){
+  					var parent = document.getElementById('input');
+  					parent.value = '';
+  					parent.focus();
+  				}
+    		}
+    	});
+    </script>
+</body>
+</html>

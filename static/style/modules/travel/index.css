@@ -1,0 +1,112 @@
+.mod-travel {
+	position: relative;
+	overflow: hidden;
+	padding: 0 45px 45px 45px;
+}
+.mod-travel .box {
+	overflow: hidden;
+	position: relative;
+	left: -45px;
+	width: 300%;
+	padding: 0 45px;
+	transition: all .5s ease;
+}
+.mod-travel .to-switch {
+	left: -900px;
+}
+.mod-travel .switch {
+	font-family: 'sunsum';
+	line-height: 80px;
+}
+.mod-travel .switch-right {
+	text-align: right;
+}
+.mod-travel .switch a {
+	padding: 0 8px;
+	font-family: 'Microsoft Yahei';
+	color: #333;
+}
+.mod-travel .strategy-box,
+.mod-travel .picture-box {
+	float: left;
+	width: 810px;
+	padding-right: 45px;
+}
+/* 攻略干货 */
+.mod-travel .sgy-list {
+	overflow: hidden;
+	zoom:1;
+	margin-top: 20px;
+}
+.mod-travel .sgy-item {
+	float: left;
+	width: 50%;
+	line-height: 50px;
+}
+.mod-travel .sgy-item a {
+	position: relative;
+	padding-left: 30px;
+	color: #666;
+}
+.mod-travel .sgy-item a:before {
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 5px;
+	width: 5px;
+	height: 5px;
+	background: #999;
+}
+.mod-travel .sgy-item a:hover {
+	color: #f36c21;
+}
+
+/* 照片欣赏 */
+.mod-travel .list {
+	overflow: hidden;
+	zoom:1;
+	margin-right: -30px;
+}
+.mod-travel .item {
+	float: left;
+	width: 150px;
+	height: 180px;
+	padding: 10px;
+	margin: 0 40px 45px 0;
+	background: #fff;
+	box-shadow: 0 0 10px #eee;
+}
+.mod-travel .item a {
+	display: block;
+	color: #666;
+}
+.mod-travel .item .pic {
+	overflow: hidden;
+	display: block;
+	height: 120px;
+	background: #eee url('../../../images/pic/errimg.png') no-repeat center;
+}
+.mod-travel .item img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.mod-travel .item .name,
+.mod-travel .item .time {
+	display: block;
+}
+.mod-travel .item .name {
+	margin: 10px 0 8px 0;
+}
+.mod-travel .item .time {
+	position: relative;
+	font-size: 12px;
+}
+.mod-travel .item .lock {
+	position: absolute;
+	top: -4px;
+	right: 0;
+	width: 20px;
+	height: 26px;
+	background: url('../../../images/lock.png') no-repeat center;
+}
