@@ -1,0 +1,21 @@
+.header {
+	padding: 30px 0 15px 0;
+
+}
+.container {
+	height: auto;
+	background: #fff;
+}
+.mod-strategy {
+	min-height: 600px;
+	padding: 20px 0;
+	margin: 20px 0 15px 0;
+	background: #eee;
+}
+.mod-strategy .strategy {
+	width: 900px;
+	margin: 0 auto;
+}
+.mod-strategy .strategy h2 {
+	font-size: 16px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>旅行 - luyee的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../static/style/common/common.css" />
+    <link rel="stylesheet" href="../../static/style/modules/travel/strategy.css" />
+</head>
+<body>
+    <div class="wrap">
+    	<div  class="header">
+            <a class="logo" href="/"><img src="../../static/images/logo.png" alt="logo" /></a>
+            <div class="nav">
+                <a class="nav-item" href="../../index.html">主页</a>
+                <a class="nav-item" href="../frontend/index.html">前端</a>
+                <a class="nav-item" href="../essay/index.html">随笔</a>
+                <a class="nav-item active" href="index.html">旅行</a>
+                <a class="nav-item" href="../about/index.html">关于</a>
+            </div>
+        </div>
+        <div id="strategy" class="container">
+            <div class="mod-strategy">
+                <div class="strategy">
+                    <h2># {{ title }}攻略 #</h2>
+                </div>
+            </div>
+        </div>
+    	<div class="footer">
+            <p class="copyright">Copyright© cluyee.github.io</p>
+        </div>
+    </div>
+	
+    <script src="../../static/script/lib/jquery.min.js"></script>
+	<script src="../../static/script/lib/vue.js"></script>
+    <script>
+        var titleVal = decodeURIComponent(window.location.search.split('=')[1]);
+    	var sgy = new Vue({
+            el:'#strategy',
+            data:{
+                title: titleVal
+            }
+    	});
+    </script>
+</body>
+</html>

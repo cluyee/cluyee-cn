@@ -15,8 +15,6 @@
                 <div class="nav">
                     <a class="nav-item" href="../../index.html">主页</a>
                     <a class="nav-item" href="../frontend/index.html">前端</a>
-                    <!-- <a class="nav-item" href="../example/index.html">栗子</a> -->
-                    <!-- <a class="nav-item" href="../plugins/index.html">插件库</a> -->
                     <a class="nav-item" href="../essay/index.html">随笔</a>
                     <a class="nav-item active" href="javascript:;">旅行</a>
                     <a class="nav-item" href="../about/index.html">关于</a>
@@ -33,7 +31,7 @@
                                 <p class="switch switch-right"><a name="left" @click="switchTab">攻略干货</a>&gt;</p>
                                 <ul class="list">
                                     <template v-for="item in piclist">
-                                    <li class="item"><a :href="item.link">
+                                    <li class="item"><a :href="item.link+'&name='+item.name">
                                         <span class="pic">
                                             <img v-if="item.src" :src="item.src" alt="图册封面">
                                         </span>
@@ -50,7 +48,7 @@
                                 <p class="switch">&lt;<a name="right" @click="switchTab">照片欣赏</a></p>
                                 <h2>自由行旅游攻略：（仅供参考）</h2>
                                 <ul class="sgy-list">
-                                    <li v-for="list in sgylist" class="sgy-item"><a :href="list.link">{{ list.title }}</a></li>
+                                    <li v-for="list in sgylist" class="sgy-item"><a :href="list.link+'?name='+list.title">{{ list.title }}攻略</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -72,12 +70,12 @@
                 toSwitch:false,
                 moveToRight:false,
                 sgylist:[
-                    { title:'实行之旅 - 苏州攻略', link:'/'},
-                    { title:'实行之旅 - 苏州攻略', link:'/'},
-                    { title:'实行之旅 - 苏州攻略', link:'/'},
-                    { title:'实行之旅 - 苏州攻略', link:'/'},
-                    { title:'实行之旅 - 苏州攻略', link:'/'},
-                    { title:'实行之旅 - 苏州攻略', link:'/'}
+                    { title:'实行之旅 - 苏州', link:'strategy.html'},
+                    { title:'都市之行 - 上海', link:'strategy.html'},
+                    { title:'实行之旅 - 苏州', link:'strategy.html'},
+                    { title:'毕业之旅 - 云南', link:'strategy.html'},
+                    { title:'一路向南 - 绍兴', link:'strategy.html'},
+                    { title:'购物之行 - 香港', link:'strategy.html'}
                 ],
                 piclist:[
                     { name:'实行之旅 - 苏州', time:'2015-09-10', src:'../../static/images/pic/suzhou.jpg', link:'picture.html?type=1'},

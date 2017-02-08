@@ -14,10 +14,8 @@
             <div class="nav">
                 <a class="nav-item" href="../../index.html">主页</a>
                 <a class="nav-item" href="../frontend/index.html">前端</a>
-                <!-- <a class="nav-item" href="../example/index.html">栗子</a> -->
-                <!-- <a class="nav-item" href="../plugins/index.html">插件库</a> -->
                 <a class="nav-item" href="../essay/index.html">随笔</a>
-                <a class="nav-item active" href="javascript:;">旅行</a>
+                <a class="nav-item active" href="index.html">旅行</a>
                 <a class="nav-item" href="../about/index.html">关于</a>
             </div>
         </div>
@@ -33,9 +31,12 @@
         	</template>
         	<template v-else>
 	        	<div class="mod-picture">
-	        		<ul class="picture-list">
-	        			<li v-for="item in piclist" class="picture"><img :src="item" height="400" alt=""></li>
-	        		</ul>
+                    <div class="picture-wrap">
+    	        		<ul class="picture-list">
+    	        			<li v-for="item in piclist" class="picture"><img :src="item" height="400" alt=""></li>
+    	        		</ul>
+                    </div>
+                    <p class="title"># {{ title }} • 图集 #</p>
 	        	</div>
         	</template>
         </div>
@@ -44,15 +45,19 @@
         </div>
     </div>
 	
+    <script src="../../static/script/lib/jquery.min.js"></script>
+    <script src="../../static/script/plugins/jquery.slider.js"></script>
 	<script src="../../static/script/lib/vue.js"></script>
     <script>
+        var titleVal = decodeURIComponent(window.location.search.split('&')[1].split('=')[1]);
     	var pw = new Vue({
     		el:'#password',
     		data:{
-    			lock:true,
+    			lock:false,
     			onfocus:false,
     			pwVal:'',
     			showClear: false,
+                title: titleVal,
     			piclist:[
     				'../../static/images/pic/yunnan.jpg',
     				'../../static/images/pic/xianggang.jpg',
@@ -106,6 +111,18 @@
   				}
     		}
     	});
+    </script>
+    <script>
+        $(".mod-picture").slider({
+            contentCls:'picture-list',
+            inEndEffect:'cycle',
+            hasTriggers:false,
+            duration:5000,
+            delay:0,
+            direction:'x',
+            auto:true,
+            immediately:true
+        });
     </script>
 </body>
 </html>
