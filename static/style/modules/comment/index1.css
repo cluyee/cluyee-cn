@@ -1,0 +1,13 @@
+/* 
+* author: c.luyee
+* date: 2017/01/05
+*/
+
+.container {
+    position: relative;
+    padding-left: 400px;
+}
+
+.main {
+    overflow: hidden;
+}
